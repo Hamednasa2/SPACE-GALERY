@@ -25,13 +25,13 @@ module.exports.run = async function({
       let page = 1;
       let start = (page - 1) * pages;
       let end = start + pages;
-      let helpMessage = `[🌐]𝘽𝙊𝙏 𝘾𝙈𝘿\n\n`;
+      let helpMessage = `𝗠𝗬 𝗖𝗠𝗗𝗦 𝗟𝗜𝗦𝗧 💬\n\n`;
       for (let i = start; i < Math.min(end, commands.length); i++) {
-        helpMessage += `\t${i + 1}. ✪➩ ${prefix}${commands[i]}\n`;
+        helpMessage += `\t${i + 1}. ╰┈➤ ${prefix}${commands[i]}\n`;
       }
       helpMessage += '\nEvent List:\n\n';
       eventCommands.forEach((eventCommand, index) => {
-        helpMessage += `\t${index + 1}.✪➩ ${prefix}${eventCommand}\n`;
+        helpMessage += `\t${index + 1}.╰┈➤ ${prefix}${eventCommand}\n`;
       });
       helpMessage += `\nPage ${page}/${Math.ceil(commands.length / pages)}. To view the next page, type '${prefix}help page number'. To view information about a specific command, type '${prefix}help command name'.`;
       api.sendMessage(helpMessage, event.threadID, event.messageID);
@@ -42,11 +42,11 @@ module.exports.run = async function({
       let end = start + pages;
       let helpMessage = `Command List:\n\n`;
       for (let i = start; i < Math.min(end, commands.length); i++) {
-        helpMessage += `\t${i + 1}.✪➩ ${prefix}${commands[i]} \n`;
+        helpMessage += `\t${i + 1}.╰┈➤ ${prefix}${commands[i]} \n`;
       }
       helpMessage += '\nEvent List:\n\n';
       eventCommands.forEach((eventCommand, index) => {
-        helpMessage += `\t${index + 1}.✪➩ ${prefix}${eventCommand} \n`;
+        helpMessage += `\t${index + 1}.╰┈➤ ${prefix}${eventCommand} \n`;
       });
       helpMessage += `\nPage ${page} of ${Math.ceil(commands.length / pages)}`;
       api.sendMessage(helpMessage, event.threadID, event.messageID);
@@ -64,14 +64,14 @@ module.exports.run = async function({
           cooldown,
           hasPrefix
         } = command;
-        const roleMessage = role !== undefined ? (role === 0 ? '➛ Permission: user' : (role === 1 ? '➛ Permission: admin' : (role === 2 ? '➛ Permission: thread Admin' : (role === 3 ? '➛ Permission: super Admin' : '')))) : '';
-        const aliasesMessage = aliases.length ? `➛ Aliases: ${aliases.join(', ')}\n` : '';
+        const roleMessage = role !== undefined ? (role === 0 ? '➙ Permission: user' : (role === 1 ? '➙ Permission: admin' : (role === 2 ? '➙ Permission: thread Admin' : (role === 3 ? '➙ Permission: super Admin' : '')))) : '';
+        const aliasesMessage = aliases.length ? `➙ Aliases: ${aliases.join(', ')}\n` : '';
         const descriptionMessage = description ? `Description: ${description}\n` : '';
-        const usageMessage = usage ? `➛ Usage: ${usage}\n` : '';
-        const creditsMessage = credits ? `➛ Credits: ${credits}\n` : '';
-        const versionMessage = version ? `➛ Version: ${version}\n` : '';
-        const cooldownMessage = cooldown ? `➛ Cooldown: ${cooldown} second(s)\n` : '';
-        const message = ` 「 Command 」\n\n➛ Name: ${name}\n${versionMessage}${roleMessage}\n${aliasesMessage}${descriptionMessage}${usageMessage}${creditsMessage}${cooldownMessage}`;
+        const usageMessage = usage ? `➙ Usage: ${usage}\n` : '';
+        const creditsMessage = credits ? `➙ Credits: ${credits}\n` : '';
+        const versionMessage = version ? `➙ Version: ${version}\n` : '';
+        const cooldownMessage = cooldown ? `➙ Cooldown: ${cooldown} second(s)\n` : '';
+        const message = ` 「 Command 」\n\n➙ Name: ${name}\n${versionMessage}${roleMessage}\n${aliasesMessage}${descriptionMessage}${usageMessage}${creditsMessage}${cooldownMessage}`;
         api.sendMessage(message, event.threadID, event.messageID);
       } else {
         api.sendMessage('Command not found.', event.threadID, event.messageID);
@@ -91,8 +91,8 @@ module.exports.handleEvent = async function({
     messageID,
     body
   } = event;
-  const message = prefix ? '[🌐] système prefix: ' + prefix: "Sorry i don't have prefix";
+  const message = prefix ? '[🌐] 𝘀𝘆𝘀𝘁𝗲𝗺 𝗽𝗿𝗲𝗳𝗶𝘅: ' + prefix: "Sorry i don't have prefix";
   if (body?.toLowerCase().startsWith('prefix')) {
     api.sendMessage(message, threadID, messageID);
   }
-}
+          }
