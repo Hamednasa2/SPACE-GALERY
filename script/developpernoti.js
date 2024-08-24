@@ -8,7 +8,7 @@ module.exports.config = {
 	role: 2,
 	description: "Sends a message to all groups and can only be done by the admin.",
 	hasPrefix: false,
-	aliases: ["notification"],
+	aliases: ["notification","noti"],
 	usages: "[Text]",
 	cooldown: 0,
 };
