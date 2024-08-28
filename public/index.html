@@ -1,96 +1,152 @@
 <!DOCTYPE html>
-<html lang="en">
-   <head>
-      <title>𝗖𝗔𝗛𝗔𝗧𝗚𝗣𝗧|∇Δ|✨🧋</title>
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="styles.css">
-      <link rel="icon" href="1720867698679.jpg">
-   </head>
-   <body>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-         <a class="navbar-brand" href="#">𝗔𝗖𝗖𝗘𝗨𝗜𝗟</a>
-         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-         <span class="navbar-toggler-icon"></span>
-         </button>
-         <div class="collapse navbar-collapse justify-content-end" id="navbarNav" style="margin-right: 70px;">
-            <ul class="navbar-nav">
-               <li class="nav-item active">
-                  <a class="nav-link" href="/">𝗔𝗖𝗖𝗘𝗨𝗜𝗟<span class="sr-only">(current)</span>
-                  </a>
-               </li>
-               <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Features </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                     <a class="dropdown-item" href="#">Cookies Extractor</a>
-                     <div class="dropdown-divider"></div>
-                     <a class="dropdown-item" href="/step_by_step_guide">Step-by-Step Guide</a>
-                  </div>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="online_user">Active</a>
-               </li>
-            </ul>
-         </div>
-      </nav>
-      <div class="container">
-         <h1 class="col text-center" style="font-size: 20px; padding: 10px;">𝗖𝗛𝗔𝗧𝗚𝗣𝗧✨🧋</h1>
-         <form id="json-form" onsubmit="submitForm(event)">
-            <div class="row">
-               <div class="col-md-12">
-                  <textarea id="json-data" class="form-control centered-textarea center-placeholder" placeholder=""></textarea>
-               </div>
-            </div>
-         </form>
-         <p style=" margin-top: 10px">INSÉRÉ VOTRE COOKIE C3C FBSTATE .</p>
-      </div>
-      <div class="container">
-         <h1 class="col text-center" style="font-size: 20px; padding: 10px;">𝗖𝗥𝗘𝗔𝗧𝗘𝗨𝗥</h1>
-         <img src="https://tinyurl.com/27fu3vnn" alt="" width="200" height="200" style="display: block; margin: auto; border-radius: 15px; margin: 10px auto;">
-           <a href="https://www.facebook.com/EINSTEIN.JUNIOR.HAMED">
-         <button type="subit">𝗘𝗜𝗡𝗦𝗧𝗘𝗜𝗡 𝗝𝗨𝗡𝗜𝗢𝗥</button></a>
-         <div class="container" id="listOfCommands">
-            <h1 style="font-size: 16px; padding: 10px;">𝘃𝗲𝘂𝗶𝗹𝗹𝗲𝘇 𝗰𝗵𝗼𝗶𝘀𝗶𝗿 𝗹𝗲𝘀 𝗰𝗺𝗱 𝗾𝘂𝗶 𝘃𝗼𝘂𝘀 𝗽𝗹𝗮𝗶𝘀𝗲𝗻𝘁.</h1>
-            <button class="btn btn-primary" onclick="selectAllCommands()">tous sélectionner</button>
-         </div>
-         <div class="container" id="listOfCommandsEvent">
-            <h1 style="font-size: 16px; padding: 10px;">Veuillez choisir vos commandes d'événement en appuyant sur les options respectives.</h1>
-            <button class="btn btn-primary" onclick="selectAllEvents()">𝘁𝗼𝘂𝘀 𝘀𝗲𝗹𝗲𝗰𝘁𝗶𝗼𝗻𝗻𝗲𝗿 </button>
-         </div>
-         <div class="container" id="prefixOfCommands">
-            <h1 style="font-size: 16px; padding: 10px;">𝘃𝗲𝘂𝗶𝗹𝗹𝗲𝘇 𝘀𝗮𝗶𝘀𝗶𝗿 𝗹𝗲 𝗽𝗿𝗲𝗳𝗶𝘅 𝗱𝘂 𝗯𝗼𝘁 𝗱𝗮𝗻𝘀 𝗹𝗮 𝗰𝗮𝘀𝗲 </h1>
-            <input type="text" id="inputOfPrefix">
-         </div>
-         <div class="container" id="adminOfCommands">
-            <h1 style="font-size: 16px; padding: 10px;">𝘃𝗲𝘂𝗶𝗹𝗹𝗲𝘇 𝗲𝗻𝘁𝗿𝗲 𝘃𝗼𝘁𝗿𝗲 𝘂𝗶𝗱</h1>
-            <input type="text" id="inputOfAdmin">
-         </div>
-         <label style="font-size: 14px; display: flex; align-items: center; padding: 22px;">
-         <input type="checkbox" id="agreeCheckbox" style="margin-right: 10px;">Cocher cette case certifie que j'ai lu, compris et accepté les conditions générales. </label>
-         <div class="col text-center">
-            <button class="btn btn-primary" onclick="State()" disabled id="submitButton" style="width: 100%">𝘁𝗲𝗿𝗺𝗶𝗻𝗲𝗿</button>
-         </div>
-      </div>
-      <div id="result" class="container text-center" style="display: none;"></div>
-      <div class="footer">
-         <p>Time: <span id="time"></span>
-         </p>
-         <p>Ping: <span id="ping"></span>
-         </p>
-      </div>
-      <script src="script.js"></script>
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
-   </body>
-            </html>
-<a href="https://www.facebook.com/EINSTEIN.JUNIOR.HAMED" target="_blank" style="text-decoration: none;">
-    <button style="background-color: #4267B2; color: white; border: none; padding: 10px 20px; font-size: 16px; cursor: pointer;">
-        pour plus d'informations contactez moi sur Facebook 💬
-    </button>
-</a>
-      </br>
-          </br>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>𝗦𝗣𝗔𝗖𝗘 𝗚𝗔𝗟𝗘𝗥𝗬 🌠</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+
+        .photo-container {
+            width: 80%;
+            max-width: 800px;
+            margin: 20px 0;
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .photo-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .photo-title {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+
+        .photo-description {
+            font-size: 16px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <!-- Premier bloc de photo -->
+    <div class="photo-container">
+        <img src="https://tinyurl.com/26rlw7kj" alt="Photo 1">
+        <div class="photo-title">𝐥𝐚 𝐩𝐥𝐚𝐧𝐞̀𝐭𝐞 𝐌𝐄𝐑𝐂𝐔𝐑𝐄</div>
+        <div class="photo-description">Mercure est la planète la plus proche du Soleil et la plus petite du système solaire. Voici quelques informations importantes à savoir sur cette planète :
+
+1. **Proximité au Soleil** : Mercure orbite à une distance moyenne de seulement 57,9 millions de kilomètres du Soleil. En raison de cette proximité, elle est sujette à des températures extrêmes.
+
+2. **Températures Extrêmes** : La température à la surface de Mercure peut atteindre environ 430°C pendant le jour et descendre à -180°C la nuit. Cela est dû à son manque d'atmosphère significative pour retenir la chaleur.
+
+3. **Période de Rotation et Révolution** :
+   - **Rotation** : Mercure met environ 59 jours terrestres pour tourner sur elle-même.
+   - **Révolution** : Elle fait le tour du Soleil en seulement 88 jours terrestres. Fait intéressant, un jour solaire (un cycle complet de jour et de nuit) sur Mercure dure environ 176 jours terrestres.
+
+4. **Surface** : La surface de Mercure est parsemée de cratères, similaires à ceux que l'on trouve sur la Lune. Ces cratères sont le résultat d'impacts de météorites et de comètes.
+
+5. **Absence d'Atmosphère** : Mercure possède une atmosphère extrêmement mince, composée principalement d'atomes de sodium, d'hydrogène, d'hélium, et d'oxygène. Cette fine exosphère ne peut pas retenir la chaleur, d'où les variations extrêmes de température.
+
+6. **Champ Magnétique** : Mercure possède un champ magnétique global, bien que beaucoup plus faible que celui de la Terre. Ce champ magnétique est probablement généré par un noyau métallique partiellement liquide.
+
+7. **Exploration** : Mercure a été visitée par plusieurs missions spatiales, notamment par les sondes Mariner 10 dans les années 1970 et plus récemment par la mission MESSENGER, qui a orbité autour de Mercure de 2011 à 2015.
+
+8. **Absence de Lunes** : Mercure n'a aucune lune ou satellite naturel, ce qui est également le cas de Vénus.
+
+Mercure, en raison de sa proximité avec le Soleil et de ses conditions extrêmes, reste l'une des planètes les plus difficiles à étudier, mais elle offre des informations précieuses sur les conditions des planètes rocheuses dans le système solaire.</div>
+    </div>
+
+    <!-- Deuxième bloc de photo -->
+    <div class="photo-container">
+        <img src="https://tinyurl.com/28enyvf8" alt="Photo 2">
+        <div class="photo-title">𝐥𝐚 𝐩𝐥𝐚𝐧𝐞̀𝐭𝐞 𝐕𝐄𝐍𝐔𝐒</div>
+        <div class="photo-description">Vénus est une planète fascinante et mystérieuse, souvent appelée la "sœur jumelle" de la Terre en raison de sa taille et de sa composition similaires. Voici quelques informations importantes à connaître sur Vénus :
+
+### 1. **Deuxième planète du système solaire :**
+   - Vénus est la deuxième planète la plus proche du Soleil, après Mercure. Elle est située à environ 108 millions de kilomètres du Soleil.
+
+### 2. **Rotation rétrograde :**
+   - Contrairement à la plupart des autres planètes du système solaire, Vénus tourne sur elle-même dans le sens inverse (rotation rétrograde). Cela signifie que sur Vénus, le Soleil se lève à l'ouest et se couche à l'est. De plus, sa rotation est extrêmement lente : une journée sur Vénus (une rotation complète sur elle-même) dure environ 243 jours terrestres.
+
+### 3. **Atmosphère extrêmement dense et chaude :**
+   - L'atmosphère de Vénus est principalement composée de dioxyde de carbone (CO2), avec des nuages épais d'acide sulfurique. Cette atmosphère crée un effet de serre intense, piégeant la chaleur et rendant la surface de Vénus extrêmement chaude, avec des températures atteignant environ 465 °C, ce qui en fait la planète la plus chaude du système solaire, même plus que Mercure.
+
+### 4. **Pression atmosphérique écrasante :**
+   - La pression atmosphérique à la surface de Vénus est environ 92 fois supérieure à celle de la Terre. C'est l'équivalent de la pression que l'on trouverait à 900 mètres sous l'eau sur Terre.
+
+### 5. **Absence de champ magnétique significatif :**
+   - Contrairement à la Terre, Vénus ne possède pas de champ magnétique significatif, ce qui laisse sa surface et son atmosphère directement exposées au vent solaire.
+
+### 6. **Exploration spatiale :**
+   - Vénus a été visitée par plusieurs missions spatiales, notamment par les sondes soviétiques Venera dans les années 1960-1980, qui ont réussi à atterrir et transmettre des données depuis la surface de la planète. Plus récemment, des missions comme Akatsuki (JAXA) continuent d'observer Vénus depuis son orbite.
+
+### 7. **Phénomènes atmosphériques :**
+   - Les nuages de Vénus réfléchissent environ 75% de la lumière solaire, ce qui rend la planète extrêmement brillante vue de la Terre, souvent visible à l'œil nu juste après le coucher ou avant le lever du Soleil, d'où son surnom "l'étoile du berger". On y observe aussi des vents violents qui peuvent atteindre des vitesses de 360 km/h.
+
+### 8. **Absence de vie telle que nous la connaissons :**
+   - En raison de ses conditions extrêmes, Vénus est considérée comme une planète inhospitalière pour la vie telle que nous la connaissons. Cependant, certaines études récentes ont suggéré qu'il pourrait y avoir des formes de vie microscopiques dans les couches supérieures de l'atmosphère, où les conditions sont un peu moins hostiles.
+
+### 9. **Surface rocheuse avec des volcans :**
+   - La surface de Vénus est principalement composée de plaines volcaniques, avec plusieurs grands volcans et des structures géologiques complexes. Les données indiquent que Vénus pourrait encore être géologiquement active, avec des éruptions volcaniques récentes.
+
+Ces caractéristiques font de Vénus une planète d'une grande importance pour la compréhension des processus climatiques extrêmes et des évolutions planétaires dans notre système solaire.</div>
+    </div>
+
+    <!-- Troisième bloc de photo -->
+    <div class="photo-container">
+        <img src="photo3.jpg" alt="Photo 3">
+        <div class="photo-title">Nom de la Photo 3</div>
+        <div class="photo-description">Description de la photo 3. Un coucher de soleil à couper le souffle.</div>
+    </div>
+
+    <!-- Quatrième bloc de photo -->
+    <div class="photo-container">
+        <img src="photo4.jpg" alt="Photo 4">
+        <div class="photo-title">Nom de la Photo 4</div>
+        <div class="photo-description">Description de la photo 4. Une vue panoramique d'une ville.</div>
+    </div>
+
+    <!-- Cinquième bloc de photo -->
+    <div class="photo-container">
+        <img src="photo5.jpg" alt="Photo 5">
+        <div class="photo-title">Nom de la Photo 5</div>
+        <div class="photo-description">Description de la photo 5. Un portrait en noir et blanc.</div>
+    </div>
+
+    <!-- Sixième bloc de photo -->
+    <div class="photo-container">
+        <img src="photo6.jpg" alt="Photo 6">
+        <div class="photo-title">Nom de la Photo 6</div>
+        <div class="photo-description">Description de la photo 6. Une magnifique forêt verte.</div>
+    </div>
+
+    <!-- Septième bloc de photo -->
+    <div class="photo-container">
+        <img src="photo7.jpg" alt="Photo 7">
+        <div class="photo-title">Nom de la Photo 7</div>
+        <div class="photo-description">Description de la photo 7. Une vue aérienne d'une rivière sinueuse.</div>
+    </div>
+
+    <!-- Huitième bloc de photo -->
+    <div class="photo-container">
+        <img src="photo8.jpg" alt="Photo 8">
+        <div class="photo-title">Nom de la Photo 8</div>
+        <div class="photo-description">Description de la photo 8. Une image d'un animal sauvage en mouvement.</div>
+    </div>
+</body>
+</html>
